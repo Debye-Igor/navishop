@@ -10,7 +10,6 @@ function eliminar(id) {
     let carrito = JSON.parse(localStorage.getItem('carrito')) || []
     carrito = carrito.filter(item => item.id !== id)
     localStorage.setItem('carrito', JSON.stringify(carrito))
-    mostrarCarrito()
     actualizarContador()
 }
 
