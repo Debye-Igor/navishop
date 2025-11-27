@@ -6,14 +6,14 @@ const productos = [
         nombre: "Árbol Navideño",
         precio:  69000,
         descripcion: "Árbol de 1.80m con luces incluidas",
-        imagen: "https://images.unsplash.com/photo-1512389142860-9c449e58a543?w=400"
+        imagen: "/assets/img/arbol.jpeg"
     },
     {
         id: 2,
         nombre: "Luces LED",
         precio: 14990,
         descripcion: "Set de 200 luces de colores",
-        imagen: "https://images.unsplash.com/photo-1544986581-efac024faf62?w=400"
+        imagen: "/assets/img/lucesled.jpeg"
     },
     {
         id: 3,
@@ -43,4 +43,4 @@ const productos = [
         descripcion: "Guirnalda artificial de 2 metros",
         imagen: "https://images.unsplash.com/photo-1607606247874-f388c4c7a3d9?w=400"
     }
-];
+]

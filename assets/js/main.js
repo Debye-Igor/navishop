@@ -1,19 +1,19 @@
 // Actualizar contador del carrito
 function actualizarContador() {
-    const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-    const total = carrito.reduce((sum, item) => sum + item.cantidad, 0);
-    document.getElementById('cart-count').textContent = total;
+    const carrito = JSON.parse(localStorage.getItem('carrito')) || []
+    const total = carrito.reduce((sum, item) => sum + item.cantidad, 0)
+    document.getElementById('cart-count').textContent = total
 }
 
 // Agregar producto al carrito
 function agregarAlCarrito(id) {
-    const producto = productos.find(p => p.id === id);
-    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    const producto = productos.find(p => p.id === id)
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || []
     
-    const existe = carrito.find(item => item.id === id);
+    const existe = carrito.find(item => item.id === id)
     
     if (existe) {
-        existe.cantidad++;
+        existe.cantidad++
     } else {
         carrito.push({
             id: producto.id,
@@ -21,17 +21,17 @@ function agregarAlCarrito(id) {
             precio: producto.precio,
             imagen: producto.imagen,
             cantidad: 1
-        });
+        })
     }
     
-    localStorage.setItem('carrito', JSON.stringify(carrito));
-    actualizarContador();
-    alert('Producto agregado al carrito');
+    localStorage.setItem('carrito', JSON.stringify(carrito))
+    actualizarContador()
+    alert('Producto agregado al carrito')
 }
 
 // Mostrar productos en cards
 function mostrarProductos() {
-    const lista = document.getElementById('productos-lista');
+    const lista = document.getElementById('productos-lista')
     
     productos.forEach(producto => {
         lista.innerHTML += `
@@ -47,12 +47,12 @@ function mostrarProductos() {
                     </div>
                 </div>
             </div>
-        `;
-    });
+        `
+    })
 }
 
 // inniciar cuando carga la página
 document.addEventListener('DOMContentLoaded', () => {
-    actualizarContador();
-    mostrarProductos();
-});
+    actualizarContador()
+    mostrarProductos()
+})

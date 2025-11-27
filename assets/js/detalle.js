@@ -1,25 +1,25 @@
 // Obtener ID del producto de la URL
 function obtenerIdURL() {
-    const params = new URLSearchParams(window.location.search);
-    return parseInt(params.get('id'));
+    const params = new URLSearchParams(window.location.search)
+    return parseInt(params.get('id'))
 }
 
 // Actualizar contador del carrito
 function actualizarContador() {
-    const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-    const total = carrito.reduce((sum, item) => sum + item.cantidad, 0);
-    document.getElementById('cart-count').textContent = total;
+    const carrito = JSON.parse(localStorage.getItem('carrito')) || []
+    const total = carrito.reduce((sum, item) => sum + item.cantidad, 0)
+    document.getElementById('cart-count').textContent = total
 }
 
 // Agregar al carrito
 function agregarAlCarrito(id) {
-    const producto = productos.find(p => p.id === id);
-    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    const producto = productos.find(p => p.id === id)
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || []
     
-    const existe = carrito.find(item => item.id === id);
+    const existe = carrito.find(item => item.id === id)
     
     if (existe) {
-        existe.cantidad++;
+        existe.cantidad++
     } else {
         carrito.push({
             id: producto.id,
@@ -27,23 +27,23 @@ function agregarAlCarrito(id) {
             precio: producto.precio,
             imagen: producto.imagen,
             cantidad: 1
-        });
+        })
     }
     
-    localStorage.setItem('carrito', JSON.stringify(carrito));
-    actualizarContador();
-    alert('Producto agregado al carrito');
+    localStorage.setItem('carrito', JSON.stringify(carrito))
+    actualizarContador()
+    alert('Producto agregado al carrito')
 }
 
 // Mostrar detalle del producto dinamicamente 
 function mostrarDetalle() {
-    const id = obtenerIdURL();
-    const producto = productos.find(p => p.id === id);
-    const contenedor = document.getElementById('detalle-producto');
+    const id = obtenerIdURL()
+    const producto = productos.find(p => p.id === id)
+    const contenedor = document.getElementById('detalle-producto')
     
     if (!producto) {
-        contenedor.innerHTML = '<p class="alert alert-warning">Producto no encontrado</p>';
-        return;
+        contenedor.innerHTML = '<p class="alert alert-warning">Producto no encontrado</p>'
+        return
     }
     
     contenedor.innerHTML = `
@@ -58,11 +58,11 @@ function mostrarDetalle() {
                 Agregar al carrito
             </button>
         </div>
-    `;
+    `
 }
 
 // imniciar
 document.addEventListener('DOMContentLoaded', () => {
-    actualizarContador();
-    mostrarDetalle();
-});
+    actualizarContador()
+    mostrarDetalle()
+})
