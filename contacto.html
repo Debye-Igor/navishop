@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - NaviShop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">🎄 NaviShop</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="contacto.html">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="carrito.html">
+                                🛒 Carrito <span class="badge bg-light text-danger" id="cart-count">0</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Contáctanos</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <form id="contactForm">
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="nombre" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="mensaje" class="form-label">Mensaje</label>
+                            <textarea class="form-control" id="mensaje" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-success">Enviar</button>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <h4>Información</h4>
+                    <p><strong>Email:</strong> info@navishop.cl</p>
+                    <p><strong>Teléfono:</strong> +666 666 666</p>
+                    <p><strong>Dirección:</strong> Polo Norte 123</p>
+                    <p><strong>Horario:</strong><br>
+                    Lunes a Viernes: 9:00 - 18:00<br>
+                    Sábados: 10:00 - 14:00</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>NaviShop</h5>
+                    <p>Jo Jo Jo! Feliz Navidad</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contacto</h5>
+                    <p>Email: info@navishop.cl<br>
+                    Teléfono: +666 666 666</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Horario</h5>
+                    <p>Lunes a Viernes: 9:00 - 18:00<br>
+                    Sábados: 10:00 - 14:00</p>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <p>&copy; 2025 NaviShop. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/contacto.js"></script>
+</body>
+</html>

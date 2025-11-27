@@ -53,12 +53,16 @@ function mostrarDetalle() {
         <div class="col-md-6">
             <h2>${producto.nombre}</h2>
             <p class="lead">${producto.descripcion}</p>
-            <h3 class="text-success">$${producto.precio}</h3>
+            <h3 class="text-success">$${formatearPrecio(producto.precio)}</h3>
             <button onclick="agregarAlCarrito(${producto.id})" class="btn btn-success btn-lg">
                 Agregar al carrito
             </button>
         </div>
     `
+}
+
+function formatearPrecio(precio) {
+    return precio.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 }
 
 // imniciar

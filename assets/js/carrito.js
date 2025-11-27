@@ -20,6 +20,11 @@ function calcularTotal() {
     return carrito.reduce((sum, item) => sum + (item.precio * item.cantidad), 0)
 }
 
+// Formatear precio con puntos
+function formatearPrecio(precio) {
+    return precio.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")
+}
+
 // Mostrar carrito
 function mostrarCarrito() {
     const carrito = JSON.parse(localStorage.getItem('carrito')) || []
@@ -43,9 +48,9 @@ function mostrarCarrito() {
                     <div class="col-md-10">
                         <div class="card-body">
                             <h5>${item.nombre}</h5>
-                            <p>Precio: $${item.precio}</p>
+                            <p>Precio: $${formatearPrecio(item.precio)}</p>
                             <p>Cantidad: ${item.cantidad}</p>
-                            <p class="fw-bold">Subtotal: $${(item.precio * item.cantidad)}</p>
+                            <p class="fw-bold">Subtotal: $${formatearPrecio(item.precio * item.cantidad)}</p>
                             <button onclick="eliminar(${item.id})" class="btn btn-danger btn-sm">Eliminar</button>
                         </div>
                     </div>
@@ -54,7 +59,7 @@ function mostrarCarrito() {
         `
     })
 
-    document.getElementById('total').textContent = calcularTotal()
+    document.getElementById('total').textContent = formatearPrecio(calcularTotal())
 }
 
 // Finalizar compra
@@ -71,6 +76,7 @@ function comprar() {
     mostrarCarrito()
     actualizarContador()
 }
+
 
 // Iniciar
 document.addEventListener('DOMContentLoaded', () => {

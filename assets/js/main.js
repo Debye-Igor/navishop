@@ -38,11 +38,11 @@ function mostrarProductos() {
             <div class="col-md-4 mb-4">
                 <div class="card">
                     <img src="${producto.imagen}" class="card-img-top" alt="${producto.nombre}">
-                    <div class="card-body">
+                    <div class="card-body text-center">
                         <h5 class="card-title">${producto.nombre}</h5>
                         <p class="card-text">${producto.descripcion}</p>
-                        <p class="text-success fw-bold">$${producto.precio}</p>
-                        <div class="d-flex gap-2">
+                        <p class="text-success fw-bold">$${formatearPrecio(producto.precio)}</p>
+                        <div class="d-flex gap-2 justify-content-center">
                             <a href="detalle.html?id=${producto.id}" class="btn btn-primary btn-sm">Ver más</a>
                             <button onclick="agregarAlCarrito(${producto.id})" class="btn btn-success btn-sm">Agregar</button>
                         </div>
@@ -51,6 +51,10 @@ function mostrarProductos() {
             </div>
         `
     })
+}
+
+function formatearPrecio(precio) {
+    return precio.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")
 }
 
 // inniciar cuando carga la página
