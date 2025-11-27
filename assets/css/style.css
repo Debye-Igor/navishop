@@ -10,6 +10,7 @@ main {
 
 .card {
     transition: transform 0.2s;
+    height: 100%;
 }
 
 .card:hover {
@@ -17,6 +18,16 @@ main {
 }
 
 .card-img-top {
-    height: 200px;
+    height: 250px;
     object-fit: cover;
+    width: 100%;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body .btn {
+    margin-top: auto;
 }
