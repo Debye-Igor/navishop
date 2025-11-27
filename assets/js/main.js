@@ -42,8 +42,10 @@ function mostrarProductos() {
                         <h5 class="card-title">${producto.nombre}</h5>
                         <p class="card-text">${producto.descripcion}</p>
                         <p class="text-success fw-bold">$${producto.precio}</p>
-                        <a href="detalle.html?id=${producto.id}" class="btn btn-primary btn-sm">Ver más</a>
-                        <button onclick="agregarAlCarrito(${producto.id})" class="btn btn-success btn-sm">Agregar</button>
+                        <div class="d-flex gap-2">
+                            <a href="detalle.html?id=${producto.id}" class="btn btn-primary btn-sm">Ver más</a>
+                            <button onclick="agregarAlCarrito(${producto.id})" class="btn btn-success btn-sm">Agregar</button>
+                        </div>
                     </div>
                 </div>
             </div>
