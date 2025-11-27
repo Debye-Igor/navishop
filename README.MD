@@ -54,6 +54,7 @@ ecommerce-frontend-m2/
 - Muestra productos en tarjetas (cards) de Bootstrap
 - Botones para ver detalle y agregar al carrito
 - Diseño en grilla responsive de 3 columnas
+- Productos de muestran dinámicamente por array en JS
 
 ### Detalle de Producto (detalle.html)
 - Información completa del producto
@@ -85,5 +86,5 @@ Los precios están configurados en pesos chilenos (CLP) y se formatean automáti
 
 ## Repositorio GitHub
 
-[https://github.com/Debye-Igor/navishop.git]
+https://github.com/Debye-Igor/navishop.git
 
