@@ -1,4 +1,4 @@
-# Proyecto Bootcamp Python fullstack Modulo 2 -Fundamentos desarrollo Front-End
+# Proyecto Bootcamp Python fullstack -Modulo 2 -Fundamentos desarrollo Front-End
 
 ## NaviShop - E-commerce Navideño
 
