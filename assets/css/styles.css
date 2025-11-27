@@ -31,3 +31,7 @@ main {
 .card-body .btn {
     margin-top: auto;
 }
+
+.btn-warning:hover {
+    transform: scale(1.1);
+}
